@@ -50,6 +50,9 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0-beta1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -63,16 +66,15 @@
     <Compile Include="CustomDbConfiguration.cs" />
     <Compile Include="CustomHistoryContext.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201404171415322_Initial.cs" />
-    <Compile Include="Migrations\201404171415322_Initial.Designer.cs">
-      <DependentUpon>201404171415322_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201404211005208_Initial.cs" />
+    <Compile Include="Migrations\201404211005208_Initial.Designer.cs">
+      <DependentUpon>201404211005208_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CV.Common\CV.Common.csproj">
@@ -87,10 +89,14 @@
       <Project>{f459c171-57b7-4d82-9aa2-475806a02318}</Project>
       <Name>CV.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CV.Resources\CV.Resources.csproj">
+      <Project>{1f2d88b3-c051-430e-b2c8-d1824501a147}</Project>
+      <Name>CV.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201404171415322_Initial.resx">
-      <DependentUpon>201404171415322_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201404211005208_Initial.resx">
+      <DependentUpon>201404211005208_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
