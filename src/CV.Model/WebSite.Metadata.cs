@@ -19,7 +19,7 @@ namespace CV.Model
     {
         private WebSiteMetadata() { }
 
-        [DisplayName("Website")]
+        [Display(Name = "Website", ResourceType = typeof(Resources.Resources))]
         public string WebAddress { get; set; }
     }
 }

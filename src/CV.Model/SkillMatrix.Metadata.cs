@@ -19,18 +19,18 @@ namespace CV.Model
         private SkillMatrixMetadata() { }
 
         [ForeignKey("Skill")]
-        [DisplayName("Skill")]
+        [Display(Name = "Skill", ResourceType = typeof(Resources.Resources))]
         public int SkillId { get; set; }
 
         [ForeignKey("Experience")]
         public int ExperienceId { get; set; }
             
-        [DisplayName("Start Date")]
+        [Display(Name = "StartDate", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> StartDate { get; set; }
 
-        [DisplayName("End Date")]
+        [Display(Name = "EndDate", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> EndDate { get; set; }

@@ -93,8 +93,13 @@
       <Project>{45fe28c7-81c4-4b99-81e6-ab950537d94e}</Project>
       <Name>CV.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CV.Resources\CV.Resources.csproj">
+      <Project>{1f2d88b3-c051-430e-b2c8-d1824501a147}</Project>
+      <Name>CV.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

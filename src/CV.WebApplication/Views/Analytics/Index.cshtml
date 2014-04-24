@@ -1,0 +1,37 @@
+﻿@using CV.Resources
+@model IEnumerable<CV.WebApplication.ViewModels.PersonResumeGroup>
+
+@{
+    ViewBag.Title = Resources.Analytics;
+}
+
+<h2>@Resources.Analytics</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Resources.LastName
+        </th>
+        <th>
+            @Resources.FirstName 
+        </th>
+        <th>
+            @Resources.Number
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResumeCount)
+        </td>
+    </tr>
+}
+
+</table>

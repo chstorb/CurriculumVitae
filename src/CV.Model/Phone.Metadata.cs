@@ -15,7 +15,7 @@ namespace CV.Model
     {
         private PhoneMetadata() { }
 
-        [DisplayName("Phone Number")]
+        [Display(Name = "PhoneNumber", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.PhoneNumber)]
         public string Number { get; set; }
     }

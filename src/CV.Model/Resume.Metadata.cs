@@ -19,65 +19,66 @@ namespace CV.Model
         private ResumeMetadata() { }
 
         [ForeignKey("Person")]
-        [DisplayName("Person")]
+        [Display(Name = "Person", ResourceType = typeof(Resources.Resources))]
         public int PersonId { get; set; }
 
-        [DisplayName("Title")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name = "Title", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+            ErrorMessageResourceName = "FieldRequired")]
         public string Title { get; set; }
         
         [DefaultValue(true)]
-        [DisplayName("Visible")]
+        [Display(Name = "Visible", ResourceType = typeof(Resources.Resources))]
         public bool Visible { get; set; }
 
-        [DisplayName("Work authorisation for")]
+        [Display(Name = "WorkAuthorisationFor", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText = "Arbeitserlaubnis für jeden Arbeitgeber")]
         public string WorkAuthorisationFor { get; set; }
 
-        [DisplayName("Current Career level")]
+        [Display(Name = "CurrentCareerLevel", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText="Berufserfahren")]
         public string CurrentCareerLevel { get; set; }
 
-        [DisplayName("Current Education level")]
+        [Display(Name = "CurrentEducationLevel", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText="FH/Bachelor oder gleichwertig")]
         public string CurrentEducationLevel { get; set; }
 
-        [DisplayName("Salary from")]
+        [Display(Name = "SalaryFrom", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Currency)]
         [Column(TypeName="money")]
         public decimal SalaryFrom { get; set; }
 
-        [DisplayName("Salary to")]
+        [Display(Name = "SalaryTo", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Currency)]
         [Column(TypeName = "money")]
         public decimal SalaryTo { get; set; }
 
-        [DisplayName("Peferred country")]
+        [Display(Name = "PreferredCountry", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText="Germany")]
         public string PreferredCountry { get; set; }
 
-        [DisplayName("Preferred location")]
+        [Display(Name = "PreferredLocation", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText = "North Rhine-Westphalia")]
         public string PreferredLocation { get; set; }
 
-        [DisplayName("Desired job type")]
+        [Display(Name = "DesiredJobType", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText = "Permanent")]
         public string DesiredJobType { get; set; }
 
-        [DisplayName("Desired job status")]
+        [Display(Name = "DesiredJobStatus", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText = "Full-time")]
         public string DesiredJobStatus { get; set; }
 
-        [DisplayName("Travel days per month")]
+        [Display(Name = "TravelDaysPerMonth", ResourceType = typeof(Resources.Resources))]
         [DisplayFormat(NullDisplayText = "0")]
         public int TravelDaysPerMonth { get; set; }
 
-        [DisplayName("Availability date")]
+        [Display(Name = "AvailabilityDate", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> AvailabilityDate { get; set; }
 
-        [DisplayName("Notes")]
+        [Display(Name = "Notes", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
     }

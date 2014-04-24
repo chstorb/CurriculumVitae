@@ -18,28 +18,29 @@ namespace CV.Model
         private AttachmentMetadata() {}
 
         [ForeignKey("Person")]
-        [DisplayName("Person")]
+        [Display(Name = "Person", ResourceType = typeof(Resources.Resources))]
         public int PersonId { get; set; }
 
-        [DisplayName("Title")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name = "Title", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+            ErrorMessageResourceName = "FieldRequired")]
         public string Title { get; set; }
 
-        [DisplayName("Type")]
+        [Display(Name = "Type", ResourceType = typeof(Resources.Resources))]
         public string AttachmentType { get; set; }
 
-        [DisplayName("Date")]
+        [Display(Name = "Date", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode=true)]
         public DateTime AttachmentDate { get; set; }
 
-        [DisplayName("File Type")]
+        [Display(Name = "FileType", ResourceType = typeof(Resources.Resources))]
         public string FileType { get; set; }
 
-        [DisplayName("File Path")]
+        [Display(Name = "FilePath", ResourceType = typeof(Resources.Resources))]
         public string FilePath { get; set; }
 
-        [DisplayName("Summary")]
+        [Display(Name = "Summary", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Summary { get; set; }
     }

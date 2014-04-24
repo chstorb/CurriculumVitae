@@ -19,30 +19,30 @@ namespace CV.Model
         private CertificationMetadata() { }
 
         [ForeignKey("Person")]
-        [DisplayName("Person")]
+        [Display(Name = "Person", ResourceType = typeof(Resources.Resources))]
         public int PersonId { get; set; }
 
-        [DisplayName("Title")]
+        [Display(Name = "Title", ResourceType = typeof(Resources.Resources))]
         public string Title { get; set; }
 
-        [DisplayName("Institution")]
+        [Display(Name = "Institution", ResourceType = typeof(Resources.Resources))]
         public string InstitutionName { get; set; }
 
-        [DisplayName("Date of Receipt")]
+        [Display(Name = "DateOfReceipt", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> DateOfReceipt { get; set; }
 
-        [DisplayName("City")]
+        [Display(Name = "City", ResourceType = typeof(Resources.Resources))]
         public string City { get; set; }
 
-        [DisplayName("State/Province")]
+        [Display(Name = "StateProvince", ResourceType = typeof(Resources.Resources))]
         public string StateProvince { get; set; }
 
-        [DisplayName("Country/Region")]
+        [Display(Name = "CountryRegion", ResourceType = typeof(Resources.Resources))]
         public string CountryRegion { get; set; }
 
-        [DisplayName("Summary")]
+        [Display(Name = "Summary", ResourceType = typeof(Resources.Resources))]
         public string Summary { get; set; }
     }
 }
