@@ -14,20 +14,20 @@ namespace CV.Model
     public sealed class AddressMetadata
     {
         private AddressMetadata() { }
-        [DisplayName("Street")]
+        [Display(Name = "Street", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Street { get; set; }
 
-        [DisplayName("City")]
+        [Display(Name = "City", ResourceType = typeof(Resources.Resources))]
         public string City { get; set; }
 
-        [DisplayName("State/Province")]
+        [Display(Name = "StateProvince", ResourceType = typeof(Resources.Resources))]
         public string StateProvince { get; set; }
 
-        [DisplayName("ZIP/Postal Code")]
+        [Display(Name = "ZipPostalCode", ResourceType = typeof(Resources.Resources))]
         public string ZipPostalCode { get; set; }
 
-        [DisplayName("Country/Region")]
+        [Display(Name = "CountryRegion", ResourceType = typeof(Resources.Resources))]
         public string CountryRegion { get; set; }
     }
 }

@@ -1,0 +1,139 @@
+﻿@using CV.Resources
+@model CV.Model.Resume
+
+@{
+    ViewBag.Title = Resources.Details;
+}
+
+<h2>@Resources.Details</h2>
+
+<div>
+    <h4>@Resources.Resume</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visible)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkAuthorisationFor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkAuthorisationFor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentCareerLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentCareerLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentEducationLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentEducationLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreferredLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreferredLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DesiredJobType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DesiredJobType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DesiredJobStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DesiredJobStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TravelDaysPerMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TravelDaysPerMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailabilityDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailabilityDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
+    @Html.ActionLink(Resources.Back, "Index")
+</p>

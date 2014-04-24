@@ -15,7 +15,7 @@ namespace CV.Model
     {
         private EmailMetadata() {}
 
-        [DisplayName("E-Mail")]
+        [Display(Name = "Email", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.EmailAddress)]
         public string EMailAddress { get; set; }
     }

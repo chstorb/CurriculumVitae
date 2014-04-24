@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
 [assembly: AssemblyTitle("CV.DAL")]
-[assembly: AssemblyDescription("Curriculum Vitae Data Access Layer")]
+[assembly: AssemblyDescription("Curriculum Vitae - Data Access Layer")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("STC STORB Consulting")]
 [assembly: AssemblyProduct("Curriculum Vitae")]

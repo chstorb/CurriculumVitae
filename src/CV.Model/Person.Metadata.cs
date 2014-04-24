@@ -18,48 +18,49 @@ namespace CV.Model
     {        
         private PersonMetadata() {}
         
-        [DisplayName("Last Name")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name="LastName", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources), 
+            ErrorMessageResourceName = "FieldRequired")]
         public string LastName { get; set; }
 
-        [DisplayName("Birth Name")]
+        [Display(Name = "BirthName", ResourceType = typeof(Resources.Resources))]
         public string BirthName { get; set; }
 
-        [DisplayName("First Name")]
+        [Display(Name = "FirstName", ResourceType = typeof(Resources.Resources))]
         public string FirstName { get; set; }
 
-        [DisplayName("Martial Status")]
+        [Display(Name = "MartialStatus", ResourceType = typeof(Resources.Resources))]
         public string MartialStatus { get; set; }
 
-        [DisplayName("Number of children")]
+        [Display(Name = "NumberOfChildren", ResourceType = typeof(Resources.Resources))]
         [DefaultValue(0)]
         public int NumberOfChildren { get; set; }
 
-        [DisplayName("Birth Date")]
+        [Display(Name = "BirthDate", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime BirthDate { get; set; }
 
-        [DisplayName("Place of Birth")]
+        [Display(Name = "PlaceOfBirth", ResourceType = typeof(Resources.Resources))]
         public string PlaceOfBirth { get; set; }
 
-        [DisplayName("Nationality")]
+        [Display(Name = "Nationality", ResourceType = typeof(Resources.Resources))]
         public string Nationality { get; set; }
 
-        [DisplayName("Mother")]
+        [Display(Name = "Mother", ResourceType = typeof(Resources.Resources))]
         public int MotherId { get; set; }
 
-        [DisplayName("Father")]
+        [Display(Name = "Father", ResourceType = typeof(Resources.Resources))]
         public int FatherId { get; set; }
 
-        [DisplayName("Notes")]
+        [Display(Name = "Notes", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Notes { get; set; }
 
-        [DisplayName("Category")]
+        [Display(Name = "Category", ResourceType = typeof(Resources.Resources))]
         public string Category { get; set; }
 
-        [Display(Name = "Name")]
+        [Display(Name = "Name", ResourceType = typeof(Resources.Resources))]
         public string FullName;
     }
 }

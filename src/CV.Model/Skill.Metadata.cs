@@ -19,15 +19,16 @@ namespace CV.Model
     {
         private SkillMetadata() { }
 
-        [DisplayName("Title")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name = "Title", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+            ErrorMessageResourceName = "FieldRequired")]
         public string Title { get; set; }
 
-        [DisplayName("Description")]
+        [Display(Name = "Description", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [DisplayName("Website")]
+        [Display(Name = "Website", ResourceType = typeof(Resources.Resources))]
         public string WebAddress { get; set; }
     }
 }

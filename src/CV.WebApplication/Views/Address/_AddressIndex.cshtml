@@ -1,0 +1,66 @@
+﻿@using CV.Resources
+@model IEnumerable<CV.Model.Address>
+
+<p>
+    @*@Html.ActionLink(Resources.Create, "Create")*@
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Person.FullName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Usage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StateProvince)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZipPostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CountryRegion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Person.FullName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Usage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateProvince)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZipPostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryRegion)
+        </td>
+        @*
+        <td>
+            @Html.ActionLink(Resources.Edit, "Edit", new { id=item.ID }) |
+            @Html.ActionLink(Resources.Details, "Details", new { id=item.ID }) |
+            @Html.ActionLink(Resources.Delete, "Delete", new { id=item.ID })
+        </td>
+        *@
+    </tr>
+}
+
+</table>

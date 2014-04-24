@@ -19,46 +19,47 @@ namespace CV.Model
         private ExperienceMetadata() { }
 
         [ForeignKey("Resume")]
-        [DisplayName("Resume")]
+        [Display(Name = "Resume", ResourceType = typeof(Resources.Resources))]
         public int ResumeId { get; set; }
 
-        [DisplayName("Employer")]
+        [Display(Name = "Employer", ResourceType = typeof(Resources.Resources))]
         public string Employer { get; set; }
 
-        [DisplayName("Job Title")]
+        [Display(Name = "JobTitle", ResourceType = typeof(Resources.Resources))]
         public string JobTitle { get; set; }
 
-        [DisplayName("Industry")]
+        [Display(Name = "Industry", ResourceType = typeof(Resources.Resources))]
         public string Industry { get; set; }
 
         [DisplayName("City")]
+        [Display(Name = "Email", ResourceType = typeof(Resources.Resources))]
         public string City { get; set; }
 
-        [DisplayName("State/Province")]
+        [Display(Name = "StateProvince", ResourceType = typeof(Resources.Resources))]
         public string StateProvince { get; set; }
 
-        [DisplayName("Country/Region")]
+        [Display(Name = "CountryRegion", ResourceType = typeof(Resources.Resources))]
         public string CountryRegion { get; set; }
 
-        [DisplayName("Description")]
+        [Display(Name = "Description", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
-        [DisplayName("Start Date")]
+        [Display(Name = "StartDate", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> StartDate { get; set; }
 
-        [DisplayName("End Date")]
+        [Display(Name = "EndDate", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public Nullable<DateTime> EndDate { get; set; }
 
-        [DisplayName("Responsibilities")]
+        [Display(Name = "Responsibilities", ResourceType = typeof(Resources.Resources))]
         public string Responsibilities { get; set; }
 
         [DefaultValue(true)]
-        [DisplayName("Visible")]
+        [Display(Name = "Visible", ResourceType = typeof(Resources.Resources))]
         public bool Visible { get; set; }
     }
 }

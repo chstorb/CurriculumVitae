@@ -22,11 +22,12 @@ namespace CV.Model
         //public int ContactDetailId { get; set; }
 
         [ForeignKey("Person")]
-        [DisplayName("Person")]
+        [Display(Name = "Person", ResourceType = typeof(Resources.Resources))]
         public int PersonId { get; set; }
         
-        [DisplayName("Art")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name = "Usage", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+            ErrorMessageResourceName = "FieldRequired")]
         public string Usage { get; set; }
     }
 }

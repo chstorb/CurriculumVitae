@@ -1,0 +1,85 @@
+﻿@using CV.Resources
+@model CV.Model.Attachment
+
+@{
+    ViewBag.Title = Resources.Delete;
+}
+
+<h2>@Resources.Delete</h2>
+
+@* :STC: Start *@
+<p class="error">@ViewBag.ErrorMessage</p>
+@* :STC: End *@
+
+<h3>@Resources.ConfirmDelete</h3>
+<div>
+    <h4>@Resources.Attachment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttachmentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttachmentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttachmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttachmentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FilePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FilePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Summary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.Delete class="btn btn-default" /> |
+            @Html.ActionLink(Resources.Back, "Index")
+        </div>
+    }
+</div>

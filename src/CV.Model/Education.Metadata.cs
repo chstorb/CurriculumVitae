@@ -19,39 +19,40 @@ namespace CV.Model
         private EducationMetadata() { }
 
         [ForeignKey("Person")]
-        [DisplayName("Person")]
+        [Display(Name = "Person", ResourceType = typeof(Resources.Resources))]
         public int PersonId { get; set; }
 
-        [DisplayName("School/Institution")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name = "SchoolInstitution", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+            ErrorMessageResourceName = "FieldRequired")]
         public string SchoolInstitution { get; set; }
 
-        [DisplayName("Degree")]
+        [Display(Name = "Degree", ResourceType = typeof(Resources.Resources))]
         public string Degree { get; set; }
 
-        [DisplayName("Date from")]
+        [Display(Name = "DateFrom", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateFrom { get; set; }
 
-        [DisplayName("Date to")]
+        [Display(Name = "DateTo", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateTo { get; set; }
 
-        [DisplayName("Concentrations")]
+        [Display(Name = "Concentrations", ResourceType = typeof(Resources.Resources))]
         public string Concentrations { get; set; }
 
-        [DisplayName("City")]
+        [Display(Name = "City", ResourceType = typeof(Resources.Resources))]
         public string City { get; set; }
 
-        [DisplayName("State/Province")]
+        [Display(Name = "StateProvince", ResourceType = typeof(Resources.Resources))]
         public string StateProvince { get; set; }
         
-        [DisplayName("Country/Region")]
+        [Display(Name = "CountryRegion", ResourceType = typeof(Resources.Resources))]
         public string CountryRegion { get; set; }
         
-        [DisplayName("Description")]
+        [Display(Name = "Description", ResourceType = typeof(Resources.Resources))]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
     }

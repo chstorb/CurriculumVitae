@@ -6,10 +6,10 @@ using System.Web;
 namespace CV.Diagnostics.Logging
 {
     /// <summary>
-    /// The ILogger interface provides three tracing levels to indicate the relative importance of logs, and one 
-    /// designed to provide latency information for external service calls such as database queries. The logging 
-    /// methods have overloads that let you pass in an exception. This is so that exception information including 
-    /// stack trace and inner exceptions is reliably logged by the class that implements the interface, instead of 
+    /// The interface provides three tracing levels to indicate the relative importance of logs, and one designed 
+    /// to provide latency information for external service calls such as database queries. The logging methods 
+    /// have overloads that let you pass in an exception. This is so that exception information including stack 
+    /// trace and inner exceptions is reliably logged by the class that implements the interface, instead of 
     /// relying on that being done in each logging method call throughout the application.
     ///
     /// The TraceApi methods enable you to track the latency of each call to an external service such as SQL Database.

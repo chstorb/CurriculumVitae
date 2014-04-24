@@ -1,0 +1,132 @@
+﻿@* :STC: Start *@
+@*model IEnumerable<CV.Model.Experience>*@
+@using CV.Resources
+@model PagedList.IPagedList<CV.Model.Experience> 
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@* :STC: End *@
+
+@{
+    ViewBag.Title = @Resources.Experience;
+}
+
+<h2>@Resources.Experience</h2>
+
+<p>
+    @Html.ActionLink(Resources.Create, "Create")
+</p>
+
+@* :STC: Start *@
+@using (Html.BeginForm("Index", "Experience", FormMethod.Get))
+{ 
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+@* :STC: End *@
+
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Employer)*@
+            @Resources.Employer
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.JobTitle)*@
+            @Resources.JobTitle
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Industry)*@
+            @Resources.Industry
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.City)*@
+            @Resources.City
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.StateProvince)*@
+            @Resources.StateProvince
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CountryRegion)*@
+            @Resources.CountryRegion
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Description)*@
+            @Resources.Description
+        </th>
+        <th>
+            @* :STC: Start *@
+            @*Html.DisplayNameFor(model => model.StartDate)*@
+            @Html.ActionLink(Resources.StartDate, "Index", new { sortOrder = ViewBag.StartDateSortParm, currentFilter = ViewBag.CurrentFilter })
+            @* :STC: End *@
+        </th>
+        <th>
+            @* :STC: Start *@
+            @*Html.DisplayNameFor(model => model.EndDate)*@
+            @Html.ActionLink(Resources.EndDate, "Index", new { sortOrder = ViewBag.EndDateSortParm, currentFilter = ViewBag.CurrentFilter })
+            @* :STC: End *@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Responsibilities)*@
+            @Resources.Responsibilities
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Visible)*@
+            @Resources.Visible
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Industry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateProvince)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Responsibilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Visible)
+        </td>
+        <td>
+            @Html.ActionLink(Resources.Edit, "Edit", new { id=item.ID }) |
+            @Html.ActionLink(Resources.Details, "Details", new { id=item.ID }) |
+            @Html.ActionLink(Resources.Delete, "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+@* :STC: Start *@
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber ) of @Model.PageCount 
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+        new {  page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+@* :STC: End *@

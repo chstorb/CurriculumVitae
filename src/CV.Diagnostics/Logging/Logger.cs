@@ -7,11 +7,9 @@ using System.Web;
 
 namespace CV.Diagnostics.Logging
 {
-    /// <summary>
-    /// Logger class
-    /// </summary>
     public class Logger : ILogger
     {
+
         public void Information(string message)
         {
             Trace.TraceInformation(message);

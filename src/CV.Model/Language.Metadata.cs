@@ -19,14 +19,15 @@ namespace CV.Model
         private LanguageMetadata() { }
 
         [ForeignKey("Person")]
-        [DisplayName("Person")]
+        [Display(Name = "Person", ResourceType = typeof(Resources.Resources))]
         public int PersonId { get; set; }
 
-        [DisplayName("Name")]
-        [Required(ErrorMessage = "The '{0}' field is required.")]
+        [Display(Name = "Language", ResourceType = typeof(Resources.Resources))]
+        [Required(ErrorMessageResourceType = typeof(Resources.Resources),
+            ErrorMessageResourceName = "FieldRequired")]
         public string LanguageName { get; set; }
 
-        [DisplayName("Level")]
+        [Display(Name = "Level", ResourceType = typeof(Resources.Resources))]
         public string Level { get; set; }
     }
 }

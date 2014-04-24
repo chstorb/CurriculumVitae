@@ -1,0 +1,255 @@
+﻿@*:STC: Start*@
+@*@model IEnumerable<CV.Model.Resume>*@
+@using CV.Resources
+@model CV.WebApplication.ViewModels.ResumeData
+@helper Truncate(string input, int length)
+{
+    if (input.Length <= length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+@*:STC: End*@
+@{
+    ViewBag.Title = "Resumes";
+}
+
+<h2>@Resources.Resume</h2>
+
+<p>
+    @Html.ActionLink(Resources.Create, "Create")
+</p>
+<table class="table">
+    <tr>
+        @*:STC: Start*@        
+        @*
+        <th>
+            @Html.DisplayNameFor(model => model.Person.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Visible)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkAuthorisationFor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentCareerLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentEducationLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalaryFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalaryTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreferredCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreferredLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesiredJobType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DesiredJobStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TravelDaysPerMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvailabilityDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>*@
+        <th>Name</th>
+        <th>Title</th>
+        <th>Visible</th>
+        @*:STC: End*@        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Resumes) {
+    @*:STC: Start*@
+    @*<tr>        
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Visible)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkAuthorisationFor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentCareerLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentEducationLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalaryFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalaryTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreferredCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreferredLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesiredJobType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesiredJobStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TravelDaysPerMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AvailabilityDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>*@
+        string selectedRow = String.Empty;
+        if (item.ID == ViewBag.ResumeId)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>
+                @if (item.Person != null)
+                { 
+                    @Html.DisplayFor(modelItem => item.Person.FullName)
+                }
+            </td>
+            <td>
+                @*:STC: Begin*@
+                @*@Html.DisplayFor(modelItem => item.Title)*@
+                @Truncate(item.Title, 25)
+                @*:STC: End*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visible)
+            </td>
+            <td>
+                @Html.ActionLink(Resources.Select, "Index", new { id=item.ID }) |
+                @Html.ActionLink(Resources.Edit, "Edit", new { id=item.ID }) |
+                @Html.ActionLink(Resources.Details, "Details", new { id=item.ID }) |
+                @Html.ActionLink(Resources.Delete, "Delete", new { id=item.ID })
+            </td>
+        </tr>
+        @*:STC: End*@
+}
+
+</table>
+
+@if (Model.Experiences != null)
+{ 
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Employer)*@
+            Employer
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Industry)*@
+            Industry
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.City)*@
+            City
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.StateProvince)*@
+            State/Province
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CountryRegion)*@
+            Country/Region
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Description)*@
+            Description
+        </th>
+        <th>
+            @*Html.DisplayNameFor(model => model.StartDate)*@
+            Start Date
+        </th>
+        <th>
+            @*Html.DisplayNameFor(model => model.EndDate)*@
+            End Date
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Responsibilities)*@
+            Responsibilities
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Visible)*@
+            Visible
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Experiences) {
+    string selectedRow = "";
+    if (item.ID == ViewBag.ExperienceId)
+    {
+        selectedRow = "success";
+    }
+    <tr class=@selectedRow>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Industry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StateProvince)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CountryRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Responsibilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Visible)
+        </td>
+        <td>
+            @Html.ActionLink(Resources.Select, "Index", new { experienceID=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+}
