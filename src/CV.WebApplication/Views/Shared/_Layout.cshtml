@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>@ViewBag.Title - @Resources.AppTitle</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -22,6 +23,33 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CV <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(Resources.Person, "Index", "Person")</li>
+                            <li>@Html.ActionLink(Resources.Resume, "Index", "Resume")</li>
+                            <li>@Html.ActionLink(Resources.Experience, "Index", "Experience")</li>
+                            <li>@Html.ActionLink(Resources.Education, "Index", "Education")</li>
+                            <li>@Html.ActionLink(Resources.Languages, "Index", "Language")</li>
+                            <li>@Html.ActionLink(Resources.Certifications, "Index", "Certification")</li>
+                            <li>@Html.ActionLink(Resources.Attachments, "Index", "Attachment")</li>
+                            <li>@Html.ActionLink(Resources.Skills, "Index", "Skill")</li>
+                            <li>@Html.ActionLink(Resources.Analytics, "Index", "Analytics")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink(Resources.Home, "Index", "Home")</li>
+                    <li>@Html.ActionLink(Resources.About, "About", "Home")</li>
+                    <li>@Html.ActionLink(Resources.Contact, "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    @*<div class="container body-content">*@
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
                     <li>@Html.ActionLink(Resources.Home, "Index", "Home")</li>
                     <li>@Html.ActionLink(Resources.Person, "Index", "Person")</li>
                     <li>@Html.ActionLink(Resources.Resume, "Index", "Resume")</li>
@@ -32,20 +60,16 @@
                     <li>@Html.ActionLink(Resources.Attachments, "Index", "Attachment")</li>
                     <li>@Html.ActionLink(Resources.Skills, "Index", "Skill")</li>
                     <li>@Html.ActionLink(Resources.Analytics, "Index", "Analytics")</li>
-                    <li>@Html.ActionLink(Resources.About, "About", "Home")</li>
-                    <li>@Html.ActionLink(Resources.Contact, "Contact", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - @Resources.AppTitle</p>
+            </footer>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - @Resources.AppTitle</p>
-        </footer>
-    </div>
+    @*</div>*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

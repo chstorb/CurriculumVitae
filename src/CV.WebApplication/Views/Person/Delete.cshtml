@@ -4,122 +4,124 @@
 @{
     ViewBag.Title = Resources.Delete;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">@Resources.Delete</h2>
 
-<h2>@Resources.Delete</h2>
+    @* :STC: Start *@
+    <p class="error">@ViewBag.ErrorMessage</p>
+    @* :STC: End *@
 
-@* :STC: Start *@
-<p class="error">@ViewBag.ErrorMessage</p>
-@* :STC: End *@
+    <h3>@Resources.ConfirmDelete</h3>
+    <div>
+        <h4>@Resources.Person</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
 
-<h3>@Resources.ConfirmDelete</h3>
-<div>
-    <h4>@Resources.Person</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BirthName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BirthName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirthName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MartialStatus)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MartialStatus)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MartialStatus)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MartialStatus)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfChildren)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfChildren)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfChildren)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfChildren)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BirthDate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PlaceOfBirth)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaceOfBirth)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PlaceOfBirth)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PlaceOfBirth)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nationality)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nationality)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MotherId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MotherId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FatherId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FatherId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FatherId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Notes)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Notes)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
+        </dl>
 
-    </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value=@Resources.Delete class="btn btn-default" /> |
-            @Html.ActionLink(Resources.Back, "Index")
-        </div>
-    }
+            <div class="form-actions no-color">
+                <input type="submit" value=@Resources.Delete class="btn btn-default" /> |
+                @Html.ActionLink(Resources.Back, "Index")
+            </div>
+        }
+    </div>
 </div>

@@ -484,7 +484,7 @@ namespace CV.Resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die Home ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Overview ähnelt.
         /// </summary>
         public static string Home {
             get {
