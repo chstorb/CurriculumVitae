@@ -4,72 +4,73 @@
 @{
     ViewBag.Title = Resources.Details;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">@Resources.Details</h2>
 
-<h2>@Resources.Details</h2>
+    <div>
+        <h4>@Resources.Attachments</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Person.FullName)
+            </dt>
 
-<div>
-    <h4>@Resources.Attachments</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Person.FullName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Person.FullName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Person.FullName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AttachmentType)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AttachmentType)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AttachmentType)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AttachmentType)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AttachmentDate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AttachmentDate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AttachmentDate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AttachmentDate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FileType)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FileType)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FileType)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FileType)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FilePath)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FilePath)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FilePath)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FilePath)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Summary)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Summary)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Summary)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
+        @Html.ActionLink(Resources.Back, "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
-    @Html.ActionLink(Resources.Back, "Index")
-</p>

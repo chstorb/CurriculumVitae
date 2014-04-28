@@ -4,197 +4,198 @@
 @{
     ViewBag.Title = Resources.Details;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">@Resources.Details</h2>
 
-<h2>@Resources.Details</h2>
+    <div>
+        <h4>@Resources.Person</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                *@Html.DisplayNameFor(model => model.FullName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BirthName)
+            </dt>
 
-<div>
-    <h4>@Resources.Person</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            *@Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BirthName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirthName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MartialStatus)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MartialStatus)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MartialStatus)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MartialStatus)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfChildren)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumberOfChildren)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfChildren)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumberOfChildren)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BirthDate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PlaceOfBirth)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaceOfBirth)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PlaceOfBirth)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PlaceOfBirth)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Nationality)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Nationality)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MotherId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MotherId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MotherId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.MotherId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.FatherId)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FatherId)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FatherId)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FatherId)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Notes)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Notes)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Category)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Category)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
-        
-        @* :STC: Start *@
-        <dt>
-            Adress
-        </dt>
-        <dd>
-            @Html.Action("GetByPersonId", "Address", new { id = Model.ID})
-            @*<table class="table">
-                <tr>
-                    <th>City</th>>
-                    <th>ZIP/Postal Code</th>
-                    <th>Street</th>
-                </tr>
-                @foreach (CV.Model.Address item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.Address)))
-                {
+            @* :STC: Start *@
+            <dt>
+                Adress
+            </dt>
+            <dd>
+                @Html.Action("GetByPersonId", "Address", new { id = Model.ID })
+                @*<table class="table">
+                        <tr>
+                            <th>City</th>>
+                            <th>ZIP/Postal Code</th>
+                            <th>Street</th>
+                        </tr>
+                        @foreach (CV.Model.Address item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.Address)))
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.City)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ZipPostalCode)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Street)
+                                </td>
+                            </tr>
+                        }
+                    </table>*@
+            </dd>
+            <dt>
+                @Resources.Email
+            </dt>
+            <dd>
+                <table class="table">
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.City)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ZipPostalCode)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Street)
-                        </td>
+                        <th>E-Mail</th>>
+                        <th>Usage</th>
                     </tr>
-                }
-            </table>*@
-        </dd>        
-        <dt>
-            @Resources.Email
-        </dt>
-        <dd>
-            <table class="table">
-                <tr>
-                    <th>E-Mail</th>>
-                    <th>Usage</th>
-                </tr>
-                @foreach (CV.Model.Email item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.Email)))
-                {
+                    @foreach (CV.Model.Email item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.Email)))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EMailAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usage)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </dd>
+            <dt>
+                @Resources.PhoneNumber
+            </dt>
+            <dd>
+                <table class="table">
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.EMailAddress)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Usage)
-                        </td>
+                        <th>Phone Number</th>>
+                        <th>Usage</th>
                     </tr>
-                }
-            </table>
-        </dd>
-        <dt>
-            @Resources.PhoneNumber
-        </dt>
-        <dd>
-            <table class="table">
-                <tr>
-                    <th>Phone Number</th>>
-                    <th>Usage</th>
-                </tr>
-                @foreach (CV.Model.Phone item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.Phone)))
-                {
+                    @foreach (CV.Model.Phone item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.Phone)))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Number)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usage)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactDetails)
+            </dt>
+            <dd>
+                <table class="table">
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Number)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Usage)
-                        </td>
+                        <th>Website</th>>
+                        <th>Usage</th>
                     </tr>
-                }
-            </table>
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.ContactDetails)
-        </dt>
-        <dd>
-            <table class="table">
-                <tr>
-                    <th>Website</th>>
-                    <th>Usage</th>
-                </tr>
-                @foreach (CV.Model.WebSite item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.WebSite)))
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.WebAddress)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Usage)
-                        </td>
-                    </tr>
-                }
-            </table>
-        </dd>
-      @* :STC: End *@
-    </dl>
+                    @foreach (CV.Model.WebSite item in Model.ContactDetails.Where(c => c.GetType() == typeof(CV.Model.WebSite)))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.WebAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usage)
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </dd>
+            @* :STC: End *@
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
+        @Html.ActionLink(Resources.Back, "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
-    @Html.ActionLink(Resources.Back, "Index")
-</p>

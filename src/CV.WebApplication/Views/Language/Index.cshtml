@@ -4,43 +4,46 @@
 @{
     ViewBag.Title = Resources.Languages;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-<h2>@Resources.Languages</h2>
+    <h2 class="page-header">@Resources.Languages</h2>
 
-<p>
-    @Html.ActionLink(Resources.Create, "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Person.FullName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LanguageName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Level)
-        </th>
-        <th></th>
-    </tr>
+    <p>
+        @Html.ActionLink(Resources.Create, "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Person.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LanguageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.FullName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LanguageName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Level)
-        </td>
-        <td>
-            @Html.ActionLink(Resources.Edit, "Edit", new { id=item.ID }) |
-            @Html.ActionLink(Resources.Details, "Details", new { id=item.ID }) |
-            @Html.ActionLink(Resources.Delete, "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Person.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LanguageName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.ActionLink(Resources.Edit, "Edit", new { id = item.ID }) |
+                    @Html.ActionLink(Resources.Details, "Details", new { id = item.ID }) |
+                    @Html.ActionLink(Resources.Delete, "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
 
-</table>
+    </table>
+</div>

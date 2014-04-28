@@ -4,136 +4,137 @@
 @{
     ViewBag.Title = Resources.Details;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">@Resources.Details</h2>
 
-<h2>@Resources.Details</h2>
+    <div>
+        <h4>@Resources.Resume</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Person.FullName)
+            </dt>
 
-<div>
-    <h4>@Resources.Resume</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Person.FullName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Person.FullName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Person.FullName)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Visible)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Visible)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Visible)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Visible)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.WorkAuthorisationFor)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.WorkAuthorisationFor)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.WorkAuthorisationFor)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.WorkAuthorisationFor)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CurrentCareerLevel)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentCareerLevel)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CurrentCareerLevel)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CurrentCareerLevel)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CurrentEducationLevel)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentEducationLevel)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CurrentEducationLevel)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.CurrentEducationLevel)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.SalaryFrom)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SalaryFrom)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SalaryFrom)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.SalaryFrom)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.SalaryTo)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SalaryTo)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.SalaryTo)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.SalaryTo)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PreferredCountry)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PreferredCountry)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PreferredCountry)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PreferredCountry)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PreferredLocation)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PreferredLocation)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PreferredLocation)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.PreferredLocation)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DesiredJobType)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DesiredJobType)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DesiredJobType)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DesiredJobType)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DesiredJobStatus)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DesiredJobStatus)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DesiredJobStatus)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.DesiredJobStatus)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TravelDaysPerMonth)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TravelDaysPerMonth)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TravelDaysPerMonth)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TravelDaysPerMonth)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AvailabilityDate)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AvailabilityDate)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AvailabilityDate)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AvailabilityDate)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Notes)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Notes)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
+        @Html.ActionLink(Resources.Back, "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink(Resources.Edit, "Edit", new { id = Model.ID }) |
-    @Html.ActionLink(Resources.Back, "Index")
-</p>

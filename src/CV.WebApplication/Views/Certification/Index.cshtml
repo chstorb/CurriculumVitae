@@ -4,73 +4,75 @@
 @{
     ViewBag.Title = Resources.Index;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">@Resources.Index</h2>
 
-<h2>@Resources.Index</h2>
+    <p>
+        @Html.ActionLink(Resources.Create, "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Person.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InstitutionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfReceipt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateProvince)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryRegion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Summary)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink(Resources.Create, "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Person.FullName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.InstitutionName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateOfReceipt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StateProvince)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CountryRegion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Summary)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Person.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InstitutionName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfReceipt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StateProvince)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountryRegion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Summary)
+                </td>
+                <td>
+                    @Html.ActionLink(Resources.Edit, "Edit", new { id = item.ID }) |
+                    @Html.ActionLink(Resources.Details, "Details", new { id = item.ID }) |
+                    @Html.ActionLink(Resources.Delete, "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.FullName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InstitutionName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateOfReceipt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StateProvince)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CountryRegion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Summary)
-        </td>
-        <td>
-            @Html.ActionLink(Resources.Edit, "Edit", new { id=item.ID }) |
-            @Html.ActionLink(Resources.Details, "Details", new { id=item.ID }) |
-            @Html.ActionLink(Resources.Delete, "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>
+</div>

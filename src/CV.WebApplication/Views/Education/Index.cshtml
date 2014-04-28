@@ -4,85 +4,87 @@
 @{
     ViewBag.Title = Resources.Education;
 }
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h2 class="page-header">@Resources.Education</h2>
 
-<h2>@Resources.Education</h2>
+    <p>
+        @Html.ActionLink(Resources.Create, "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Person.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolInstitution)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Degree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Concentrations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateProvince)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryRegion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink(Resources.Create, "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Person.FullName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SchoolInstitution)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Degree)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateFrom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateTo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Concentrations)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.City)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StateProvince)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CountryRegion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Person.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SchoolInstitution)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Degree)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Concentrations)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StateProvince)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountryRegion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink(Resources.Edit, "Edit", new { id = item.ID }) |
+                    @Html.ActionLink(Resources.Details, "Details", new { id = item.ID }) |
+                    @Html.ActionLink(Resources.Delete, "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.FullName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SchoolInstitution)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Degree)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateFrom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateTo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Concentrations)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StateProvince)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CountryRegion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink(Resources.Edit, "Edit", new { id=item.ID }) |
-            @Html.ActionLink(Resources.Details, "Details", new { id=item.ID }) |
-            @Html.ActionLink(Resources.Delete, "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+    </table>
+</div>
