@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV.WebApplication", "CV.WebApplication\CV.WebApplication.csproj", "{4E539C7C-06C3-4B91-B536-874B01A54A86}"
 EndProject
@@ -15,31 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV.Common", "CV.Common\CV.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV.Resources", "CV.Resources\CV.Resources.csproj", "{1F2D88B3-C051-430E-B2C8-D1824501A147}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9F36C3D-4248-4DF5-AB36-C2434A5E13BB}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs14
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = CV.Diagnostics\\CV.Diagnostics.csproj
-		SccProjectName1 = CV.Diagnostics
-		SccLocalPath1 = CV.Diagnostics
-		SccProjectUniqueName2 = CV.Model\\CV.Model.csproj
-		SccProjectName2 = CV.Model
-		SccLocalPath2 = CV.Model
-		SccProjectUniqueName3 = CV.WebApplication\\CV.WebApplication.csproj
-		SccProjectName3 = CV.WebApplication
-		SccLocalPath3 = CV.WebApplication
-		SccProjectUniqueName4 = CV.DAL\\CV.DAL.csproj
-		SccProjectName4 = CV.DAL
-		SccLocalPath4 = CV.DAL
-		SccProjectUniqueName5 = CV.Common\\CV.Common.csproj
-		SccProjectName5 = CV.Common
-		SccLocalPath5 = CV.Common
-		SccProjectUniqueName6 = CV.Resources\\CV.Resources.csproj
-		SccProjectName6 = CV.Resources
-		SccLocalPath6 = CV.Resources
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -72,5 +53,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3260E147-B2F4-4466-853E-5979A70FE524}
 	EndGlobalSection
 EndGlobal
