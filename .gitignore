@@ -3,3 +3,15 @@
 ################################################################################
 
 /src/.vs
+/src/CV.Common/bin/Debug
+/src/CV.Common/obj/Debug
+/src/CV.DAL/bin/Debug
+/src/CV.DAL/obj/Debug
+/src/CV.Diagnostics/bin/Debug
+/src/CV.Diagnostics/obj/Debug
+/src/CV.Model/bin/Debug
+/src/CV.Model/obj/Debug
+/src/CV.Resources/bin/Debug
+/src/CV.Resources/obj/Debug
+/src/CV.WebApplication/bin
+/src/CV.WebApplication/obj/Debug
