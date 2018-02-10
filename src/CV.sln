@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV.WebApplication", "CV.WebApplication\CV.WebApplication.csproj", "{4E539C7C-06C3-4B91-B536-874B01A54A86}"
 EndProject
@@ -17,6 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CV.Resources", "CV.Resource
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9F36C3D-4248-4DF5-AB36-C2434A5E13BB}"
 	ProjectSection(SolutionItems) = preProject
+		..\License.txt = ..\License.txt
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
